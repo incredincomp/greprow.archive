@@ -22,9 +22,22 @@
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
+##new add, set input path from string
+echo "Please define your input file path. Example /home/****/file.txt"
+read inputPath
+#this is to be sure that your use of this program is even worth while in its current form
+echo "Is this file ordered in rows?"
+read order
+if ( $order = *rows*) 
+then
+  echo "Excellent! Then I am currently programmed properly to help you! lets continue collecting information for your search."
+fi 
+
+
 input="/home/$USER/names.txt"
 #1.)input="/current/path/tofile.txt"
 #remove this comment and adjust your input path accordingly
+
 echo "Who's line would you like to find?"
 read name
 echo "looking for $name... please wait" | echo "Start Time :" $(date -u)
