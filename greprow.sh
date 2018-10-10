@@ -24,12 +24,14 @@
 set -o nounset                              # Treat unset variables as an error
 ##new add, set input path from string
 echo "Please define your input file path. Example /home/****/file.txt"
-read inputFile
+read inputPath
+#this is to be sure that your use of this program is even worth while in its current form
 echo "Is this file ordered in rows?"
 read order
-case "$order" in
-  *row*) echo "Excellent! Then I am currently programmed properly to help you! lets continue collecting information for your search."
-  *)
+if ( $order = *rows*) 
+then
+  echo "Excellent! Then I am currently programmed properly to help you! lets continue collecting information for your search."
+fi 
 
 
 input="/home/$USER/names.txt"
