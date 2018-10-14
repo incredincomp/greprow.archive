@@ -13,12 +13,12 @@
 #       OPTIONS: ---
 #  REQUIREMENTS: you need to have the names.txt file in a location you know, and put that
 #		path in as the input in comment #1
-#          BUGS: ---
-#         NOTES: ---
+#          BUGS: none as far as I know of in its current state
+#         NOTES: v1.1
 #        AUTHOR: Robert Hogue
 #  ORGANIZATION: 
 #       CREATED: 09/20/2018 06:32:54 PM
-#      REVISION:  10/7/2018 06:04:00
+#      REVISION:  10/13/2018 05:34:00
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
@@ -33,6 +33,12 @@ set -o nounset                              # Treat unset variables as an error
 #  echo "Excellent! Then I am currently programmed properly to help you! lets continue collecting information for your search."
 #fi 
 #
+#
+#
+#
+#
+#
+
 
 input="/home/$USER/names.txt"
 #1.)input="/current/path/tofile.txt"
