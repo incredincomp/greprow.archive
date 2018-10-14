@@ -16,23 +16,23 @@
 #          BUGS: ---
 #         NOTES: ---
 #        AUTHOR: Robert Hogue
-#  ORGANIZATION: MPC
+#  ORGANIZATION: 
 #       CREATED: 09/20/2018 06:32:54 PM
 #      REVISION:  10/7/2018 06:04:00
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
-##new add, set input path from string
-echo "Please define your input file path. Example /home/****/file.txt"
-read inputPath
+##new add, set input path from string, not complete
+#echo "Please define your input file path. Example /home/****/file.txt"
+#read inputPath
 #this is to be sure that your use of this program is even worth while in its current form
-echo "Is this file ordered in rows?"
-read order
-if ( $order = *rows*) 
-then
-  echo "Excellent! Then I am currently programmed properly to help you! lets continue collecting information for your search."
-fi 
-
+#echo "Is this file ordered in rows?"
+#read order
+#if ( $order = *rows*) 
+#then
+#  echo "Excellent! Then I am currently programmed properly to help you! lets continue collecting information for your search."
+#fi 
+#
 
 input="/home/$USER/names.txt"
 #1.)input="/current/path/tofile.txt"
