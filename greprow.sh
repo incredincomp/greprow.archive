@@ -8,7 +8,7 @@
 #   DESCRIPTION: Enter the first or full name of one of the people on your list, this will
 #		pull the entire line that is related to that name and print/append the data
 #		to a new file with the name of the search issued.  needs format work,
-#		much appologies
+#		much apologies
 # 
 #       OPTIONS: ---
 #  REQUIREMENTS: you need to have the names.txt file in a location you know, and put that
