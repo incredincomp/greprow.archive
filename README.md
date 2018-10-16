@@ -5,7 +5,7 @@ for use in data management and research.  In its current rendition, it will just
 
 ### Warning
 
-By nature, I break things that work well.  Just how it goes for me. That being said, I can make no certain prediction on how this code will react with a file, though it has not resulted in the loss of data for me during testing, if you use this outside of the scope of testing in a production enviroment, I should not be held responsible for your neglect to head my warning.. Have fun!
+By nature, I break things that work well.  Just how it goes for me. That being said, I can make no certain prediction on how this code will react with a file, though it has not resulted in the loss of data for me during testing, if you use this outside of the scope of testing in a production enviroment, I should not be held responsible for your neglect to heed my warning.. Have fun!
 
 ```markdown
 Syntax highlighted code block that im leaving for future reference because i hate backup files.
