@@ -22,17 +22,19 @@
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
-##new add, set input path from string, not complete
+###new add, set input path from string, not complete
 #echo "Please define your input file path. Example /home/****/file.txt"
+#
 #read inputPath
-#this is to be sure that your use of this program is even worth while in its current form
-#echo "Is this file ordered in rows?"
+#if ( $inputPath 
+###this is to be sure that your use of this program is even worth while in its current form
+#echo ""
 #read order
 #if ( $order = *rows*) 
 #then
 #  echo "Excellent! Then I am currently programmed properly to help you! lets continue collecting information for your search."
 #fi 
-#
+###start a case statement here to collect/choose data/paths
 #
 #
 #
@@ -41,8 +43,8 @@ set -o nounset                              # Treat unset variables as an error
 
 
 input="/home/$USER/names.txt"
-#1.)input="/current/path/tofile.txt"
-#remove this comment and adjust your input path accordingly
+###1.)input="/current/path/tofile.txt"
+#
 
 echo "Who's line would you like to find?"
 read name
@@ -50,9 +52,9 @@ echo "looking for $name... please wait" | echo "Start Time :" $(date -u)
 while : 
  do
       grep -i $name /home/$USER/names.txt >> $name.txt 
-#2.)searches in file (indicated in this script,) for $name user read variable and makes 
-#a seperate file $name.txt in same directory as input file. It copys the
-#whole matching line to new file or appends to the file that already exists. 
+###2.)searches in file (indicated in this script,) for $name user read variable and makes 
+###a seperate file $name.txt in same directory as input file. It copys the
+###whole matching line to new file or appends to the file that already exists. 
       if [ $? -eq 0 ] ; then
         echo "Name found and writing to file, check current directory for $name.txt"
 	exit
