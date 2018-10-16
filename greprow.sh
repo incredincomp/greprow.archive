@@ -48,7 +48,7 @@ input="/home/$USER/names.txt"
 
 echo "Who's line would you like to find?"
 read name
-echo "looking for $name... please wait" | echo "Start Time :" $(date -u)
+echo "Looking for $name... please wait" | echo "Search Start Time :" $(date -u)
 while : 
  do
       grep -i $name /home/$USER/names.txt >> $name.txt 
@@ -59,8 +59,8 @@ while :
         echo "Name found and writing to file, check current directory for $name.txt"
 	exit
       else
-        echo "error, name not found"
+        echo "Error, name not found."
 	exit
       fi
     done
-echo "ended at" $(date -u)
+echo "Search ended at" $(date -u)
