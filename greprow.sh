@@ -14,11 +14,11 @@
 #  REQUIREMENTS: you need to have the names.txt file in a location you know, and put that
 #		path in as the input in comment #1
 #          BUGS: none as far as I know of in its current state
-#         NOTES: v1.1
+#         NOTES: v1.2
 #        AUTHOR: IncredIncomp
 #  ORGANIZATION: 
 #       CREATED: 09/20/2018 06:32:54 PM
-#      REVISION:  10/13/2018 05:34:00
+#      REVISION:  10/22/2018 03:50:00
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
@@ -27,14 +27,34 @@ set -o nounset                              # Treat unset variables as an error
 #
 #read inputPath
 #if ( $inputPath 
+###better choice i think for now note that things between this line and the end mob of empty comment lines that these do not do
+###literally anything right now. just saves some variables that i will introduce later. 
+echo "This program is currently programed to follow the /home/$user/filename.txt path. If you would like to define your own
+path, please press y. Otherwise, please press n. "
+echo -n "y or n: "
+read pathReq
+if ($pathReq = "y") ; then
+    echo -n "Please type your full file path, starting with a backslash if req. example, /home/$USER/names.txt : "
+    read inputPath
+    exit
+else 
+    echo "Thats fine, this can just be a test run.  Or maybe you are a smarty pants and figured something else out that I dont know!"
+    exit
+fi
+
 ###this is to be sure that your use of this program is even worth while in its current form
-#echo ""
-#read order
-#if ( $order = *rows*) 
-#then
-#  echo "Excellent! Then I am currently programmed properly to help you! lets continue collecting information for your search."
-#fi 
-###start a case statement here to collect/choose data/paths
+#echo "How is your file organized? (Currently supported option/s are - rows)"
+echo -n "type 'rows' if you dont want an error: "
+read order
+if ( $order = "rows" ) ; then
+    echo "Excellent! Then I am currently programmed properly to help you! Lets continue collecting information for your search."
+else
+    echo "Sorry! I am not currently configured to help you.  Send my maker an email at incredincomp@gmail.com and tell him 
+         to add what you need!"
+    exit
+fi
+#
+###
 #
 #
 #
