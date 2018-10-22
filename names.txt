@@ -1,0 +1,2 @@
+##this is just a file for you to either replace or fill with info as you see fit.  
+adam smith; 192.168.1.3; 10-24-2018; 00:27:03
