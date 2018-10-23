@@ -33,12 +33,12 @@ echo "This program is currently programed to follow the /home/$user/filename.txt
 path, please press y. Otherwise, please press n. "
 echo -n "y or n: "
 read pathReq
-if ($pathReq = "y") ; then
+if ( $pathReq = "y" ) ; then
     echo -n "Please type your full file path, starting with a backslash if req. example, /home/$USER/names.txt : "
     read inputPath
     exit
 else 
-    echo "Thats fine, this can just be a test run.  Or maybe you are a smarty pants and figured something else out that I dont know!"
+    echo "That's fine, this can just be a test run.  Or maybe you are a smarty pants and figured something else out that I dont know!"
     exit
 fi
 
@@ -48,6 +48,7 @@ echo -n "type 'rows' if you dont want an error: "
 read order
 if ( $order = "rows" ) ; then
     echo "Excellent! Then I am currently programmed properly to help you! Lets continue collecting information for your search."
+    exit
 else
     echo "Sorry! I am not currently configured to help you.  Send my maker an email at incredincomp@gmail.com and tell him 
          to add what you need!"
@@ -66,9 +67,9 @@ input="/home/$USER/names.txt"
 ###1.)input="/current/path/tofile.txt"
 #
 
-echo "Who's line would you like to find?"
+echo -n "Who's line would you like to find? "
 read name
-echo "Looking for $name... please wait" | echo "Search Start Time :" $(date -u)
+echo "Looking for $name... please wait" | echo "Search Start Time : " $(date -u)
 while : 
  do
       grep -i $name /home/$USER/names.txt >> $name.txt 
