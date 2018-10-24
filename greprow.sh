@@ -36,7 +36,7 @@ read pathReq
 if [ $pathReq = "y" ] ; then
     echo -n "Please type your full file path, starting with a backslash if req. example, /home/$USER/names.txt : "
     read inputPath
-    
+    $inputPath=input
 else 
     echo "That's fine, this can just be a test run.  Or maybe you are a smarty pants and figured something else out that I dont know!"
     
