@@ -36,7 +36,8 @@ read pathReq
 if [ $pathReq = "y" ] ; then
     echo -n "Please type your full file path, starting with a backslash if req. example, /home/$USER/names.txt : "
     read inputPath
-    $inputPath=input
+#i think this is what is broken right now. check here first******************************************    
+    $inputPath="input"
 else 
     echo "That's fine, this can just be a test run.  Or maybe you are a smarty pants and figured something else out that I dont know!"
     
@@ -50,6 +51,7 @@ if [ $order = "rows" ] ; then
     echo "Excellent! Then I am currently programmed properly to help you! Lets continue collecting information for your search."
     
 else
+    if [$order != "rows" ]
     echo "Sorry! I am not currently configured to help you.  Send my maker an email at incredincomp@gmail.com and tell him 
          to add what you need!"
     exit
