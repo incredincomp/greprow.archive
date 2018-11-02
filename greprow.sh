@@ -14,11 +14,11 @@
 #  REQUIREMENTS: you need to have the names.txt file in a location you know, and put that
 #		path in as the input in comment #1
 #          BUGS: none as far as I know of in its current state
-#         NOTES: v1.2
+#         NOTES: v1.3
 #        AUTHOR: IncredIncomp
 #  ORGANIZATION: 
 #       CREATED: 09/20/2018 06:32:54 PM
-#      REVISION:  10/22/2018 03:50:00
+#      REVISION:  11/1/2018 03:50:00
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
@@ -29,27 +29,29 @@ set -o nounset                              # Treat unset variables as an error
 #if ( $inputPath 
 ###better choice i think for now note that things between this line and the end mob of empty comment lines that these do not do
 ###literally anything right now. just saves some variables that i will introduce later. 
-echo "This program is currently programed to follow the /home/$user/filename.txt path. If you would like to define your own
+echo "This program is currently programed to follow the /home/$USER/filename.txt path. If you would like to define your own
 path, please press y. Otherwise, please press n. "
 echo -n "y or n: "
-read pathReq
-if ( $pathReq = "y" ) ; then
+read answer
+if [ $answer = "y" ] ; then
     echo -n "Please type your full file path, starting with a backslash if req. example, /home/$USER/names.txt : "
     read inputPath
-    exit
+#i think this is what is broken right now. check here first******************************************    
+    $inputPath="input"
 else 
     echo "That's fine, this can just be a test run.  Or maybe you are a smarty pants and figured something else out that I dont know!"
-    exit
+    
 fi
 
 ###this is to be sure that your use of this program is even worth while in its current form
-#echo "How is your file organized? (Currently supported option/s are - rows)"
+echo "How is your file organized? (Currently supported option/s are - rows)"
 echo -n "type 'rows' if you dont want an error: "
 read order
-if ( $order = "rows" ) ; then
+if [ $order = "rows" ] ; then
     echo "Excellent! Then I am currently programmed properly to help you! Lets continue collecting information for your search."
-    exit
+    
 else
+    if [$order != "rows" ]
     echo "Sorry! I am not currently configured to help you.  Send my maker an email at incredincomp@gmail.com and tell him 
          to add what you need!"
     exit
@@ -62,8 +64,8 @@ fi
 #
 #
 
-
-input="/home/$USER/names.txt"
+input=$inputPath
+#input="/home/$USER/names.txt"
 ###1.)input="/current/path/tofile.txt"
 #
 
@@ -72,7 +74,7 @@ read name
 echo "Looking for $name... please wait" | echo "Search Start Time : " $(date -u)
 while : 
  do
-      grep -i $name /home/$USER/names.txt >> $name.txt 
+      grep -i $name $inputPath >> $name.txt 
 ###2.)searches in file (indicated in this script,) for $name user read variable and makes 
 ###a seperate file $name.txt in same directory as input file. It copys the
 ###whole matching line to new file or appends to the file that already exists. 
