@@ -36,13 +36,13 @@ read answer
 if [ $answer = "y" ] ; then
     echo -n "Please type your full file path, starting with a backslash if req. example, /home/$USER/names.txt : "
     read inputPath
-#i think this is what is broken right now. check here first******************************************    
-    $inputPath="input"
+
 else 
     echo "That's fine, this can just be a test run.  Or maybe you are a smarty pants and figured something else out that I dont know!"
     
 fi
-
+#i think this is what is broken right now. check here first******************************************    
+$inputPath="input"
 ###this is to be sure that your use of this program is even worth while in its current form
 echo "How is your file organized? (Currently supported option/s are - rows)"
 echo -n "type 'rows' if you dont want an error: "
