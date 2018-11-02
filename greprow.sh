@@ -55,7 +55,8 @@ else
     echo "Sorry! I am not currently configured to help you.  Send my maker an email at incredincomp@gmail.com and tell him 
          to add what you need!"
     exit
-fi
+    fi
+fi    
 #
 ###
 #
