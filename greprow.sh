@@ -32,8 +32,8 @@ set -o nounset                              # Treat unset variables as an error
 echo "This program is currently programed to follow the /home/$USER/filename.txt path. If you would like to define your own
 path, please press y. Otherwise, please press n. "
 echo -n "y or n: "
-read pathReq
-if [ $pathReq = "y" ] ; then
+read answer
+if [ $answer = "y" ] ; then
     echo -n "Please type your full file path, starting with a backslash if req. example, /home/$USER/names.txt : "
     read inputPath
 #i think this is what is broken right now. check here first******************************************    
