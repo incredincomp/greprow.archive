@@ -51,18 +51,12 @@ if [ $order = "rows" ] ; then
     echo "Excellent! Then I am currently programmed properly to help you! Lets continue collecting information for your search."
     
 else
-    if [$order != "rows" ]
-    echo "Sorry! I am not currently configured to help you.  Send my maker an email at incredincomp@gmail.com and tell him 
+        echo "Sorry! I am not currently configured to help you.  Send my maker an email at incredincomp@gmail.com and tell him 
          to add what you need!"
     exit
-    fi
 fi    
-#
+
 ###
-#
-#
-#
-#
 #
 
 input=$inputPath
