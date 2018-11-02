@@ -57,7 +57,7 @@ else
 fi    
 
 ###
-#
+#food
 
 input=$inputPath
 #input="/home/$USER/names.txt"
