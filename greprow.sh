@@ -14,11 +14,11 @@
 #  REQUIREMENTS: you need to have the names.txt file in a location you know, and put that
 #		path in as the input in comment #1
 #          BUGS: none as far as I know of in its current state
-#         NOTES: v1.3
+#         NOTES: v1.5
 #        AUTHOR: IncredIncomp
 #  ORGANIZATION: 
 #       CREATED: 09/20/2018 06:32:54 PM
-#      REVISION:  11/1/2018 03:50:00
+#      REVISION:  11/6/2018 05:45:00
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
@@ -42,7 +42,7 @@ else
     
 fi
 #i think this is what is broken right now. check here first******************************************    
-$inputPath="input"
+#$inputPath="input"
 ###this is to be sure that your use of this program is even worth while in its current form
 echo "How is your file organized? (Currently supported option/s are - rows)"
 echo -n "type 'rows' if you dont want an error: "
@@ -59,7 +59,7 @@ fi
 ###
 #
 
-input=$inputPath
+#input = $inputPath
 #input="/home/$USER/names.txt"
 ###1.)input="/current/path/tofile.txt"
 #
