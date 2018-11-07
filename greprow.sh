@@ -14,11 +14,11 @@
 #  REQUIREMENTS: you need to have the names.txt file in a location you know, and put that
 #		path in as the input in comment #1
 #          BUGS: none as far as I know of in its current state
-#         NOTES: v1.5
+#         NOTES: v2
 #        AUTHOR: IncredIncomp
 #  ORGANIZATION: 
 #       CREATED: 09/20/2018 06:32:54 PM
-#      REVISION:  11/6/2018 05:45:00
+#      REVISION:  11/7/2018 11:45:00 AM
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
