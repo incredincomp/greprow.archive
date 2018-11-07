@@ -39,7 +39,7 @@ if [ $answer = "y" ] ; then
 
 else 
     echo "That's fine, this can just be a test run.  Or maybe you are a smarty pants and figured something else out that I dont know!"
-    
+    inputPath = "/*/*/names.txt"
 fi
 #i think this is what is broken right now. check here first******************************************    
 #$inputPath="input"
