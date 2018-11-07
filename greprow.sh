@@ -22,15 +22,8 @@
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
-###new add, set input path from string, not complete
-#echo "Please define your input file path. Example /home/****/file.txt"
-#
-#read inputPath
-#if ( $inputPath 
-###better choice i think for now note that things between this line and the end mob of empty comment lines that these do not do
-###literally anything right now. just saves some variables that i will introduce later. 
-echo "This program is currently programed to follow the /home/$USER/filename.txt path. If you would like to define your own
-path, please press y. Otherwise, please press n. "
+
+echo " If you would like to define your own path, please press y. Otherwise, if you want this program to break, please press n. "
 echo -n "y or n: "
 read answer
 if [ $answer = "y" ] ; then
@@ -38,12 +31,14 @@ if [ $answer = "y" ] ; then
     read inputPath
 
 else 
-    echo "That's fine, this can just be a test run.  Or maybe you are a smarty pants and figured something else out that I dont know!"
+    echo "That's fine, this means this program is going to look in the /*/*/names.txt location."
+#i dont think this is a real working path though, to be checked****#    
     inputPath = "/*/*/names.txt"
-fi
-#i think this is what is broken right now. check here first******************************************    
-#$inputPath="input"
+fi  
+
 ###this is to be sure that your use of this program is even worth while in its current form
+#
+#this honestly needs to go but I am too attached to everthing.  Im realizing this is not needed though
 echo "How is your file organized? (Currently supported option/s are - rows)"
 echo -n "type 'rows' if you dont want an error: "
 read order
@@ -57,16 +52,13 @@ else
 fi    
 
 ###
-#
-
-#input = $inputPath
-#input="/home/$USER/names.txt"
-###1.)input="/current/path/tofile.txt"
-#
 
 echo -n "Who's line would you like to find? "
 read name
 echo "Looking for $name... please wait" | echo "Search Start Time : " $(date -u)
+#I dont know why this works, how or if it even should.  This while statement shows my naivety to bash scripting though.
+
+###DO NOT TOUCH!!!! THIS SHOULDNT WORK, SO THEREFORE ITS PERFECTLY BROKEN AS IS!!!!###
 while : 
  do
       grep -i $name $inputPath >> $name.txt 
