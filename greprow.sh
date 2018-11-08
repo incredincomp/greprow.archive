@@ -14,7 +14,7 @@
 #  REQUIREMENTS: you need to have the names.txt file in a location you know, and put that
 #		path in as the input in comment #1
 #          BUGS: none as far as I know of in its current state
-#         NOTES: v2
+#         NOTES: v2.1
 #        AUTHOR: IncredIncomp
 #  ORGANIZATION: 
 #       CREATED: 09/20/2018 06:32:54 PM
@@ -35,23 +35,6 @@ else
 #i dont think this is a real working path though, to be checked****#    
     inputPath = "/*/*/names.txt"
 fi  
-
-###this is to be sure that your use of this program is even worth while in its current form
-#
-#this honestly needs to go but I am too attached to everthing.  Im realizing this is not needed though
-echo "How is your file organized? (Currently supported option/s are - rows)"
-echo -n "type 'rows' if you dont want an error: "
-read order
-if [ $order = "rows" ] ; then
-    echo "Excellent! Then I am currently programmed properly to help you! Lets continue collecting information for your search."
-    
-else
-        echo "Sorry! I am not currently configured to help you.  Send my maker an email at incredincomp@gmail.com and tell him 
-         to add what you need!"
-    exit
-fi    
-
-###
 
 echo -n "Who's line would you like to find? "
 read name
