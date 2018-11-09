@@ -26,15 +26,33 @@ set -o nounset                              # Treat unset variables as an error
 echo " If you would like to define your own path, please press y. Otherwise, if you want this program to break, please press n. "
 echo -n "y or n: "
 read answer
-if [ $answer = "y" ] ; then
-    echo -n "Please type your full file path, starting with a backslash if req. example, /home/$USER/names.txt : "
-    read inputPath
+case $answer in
 
-else 
-    echo "That's fine, this means this program is going to look in the /*/*/names.txt location."
+            [yY] )
+                   echo -n "Please type your full file path, starting with a backslash if its absolute. Its more than likely equal to $PWD: "
+                   read inputPath
+                   ;;
+
+            [nN] )
+                   echo "okay, were going to just use $HOME for you."
+                   inputPath = $HOME
+                   ;;
+
+            *) echo "Invalid input"
+                ;;
+esac
+
+#if [ $answer = "y" ] ; then
+#    echo -n "Please type your full file path, starting with a backslash if req. example, /home/$USER/names.txt : "
+#    read inputPath
+
+#else 
+
+#    inputPath = $PWD
+#    echo "That's fine, this means this program is going to look in the $PWD location."
 #i dont think this is a real working path though, to be checked****#    
-    inputPath = "/*/*/names.txt"
-fi  
+#fi  
+
 
 echo -n "Who's line would you like to find? "
 read name
