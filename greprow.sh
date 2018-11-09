@@ -15,7 +15,7 @@
 #		path in as the input in comment #1
 #          BUGS: none as far as I know of in its current state
 #         NOTES: v2.2
-#        AUTHOR: IncredIncomp & Venom
+#        AUTHOR: @incredincomp & @Venom404
 #  ORGANIZATION: 
 #       CREATED: 09/20/2018 06:32:54 PM
 #      REVISION:  11/8/2018 08:45:00 PM
