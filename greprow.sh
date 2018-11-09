@@ -26,6 +26,7 @@ set -o nounset                              # Treat unset variables as an error
 echo " If you would like to define your own path, please press y. Otherwise, if you want this program to break, please press n. "
 echo -n "y or n: "
 read answer
+#not working add if above this though maybe
 case $answer in
 
             [yY] )
