@@ -30,13 +30,13 @@ read answer
 case $answer in
 
             [yY] )
-                   read -p "Please type your full file path, starting with a backslash if its absolute. Its more than likely equal to $PWD: " inputPath
+                   read -p "Please type your full file path, starting with a backslash if its absolute. Its more than likely equal to $PWD/names.txt: " inputPath
 #                   read inputPath
                    ;;
 
             [nN] )
-                   echo "okay, were going to just use $HOME for you."
-                   inputPath="$HOME"
+                   echo "okay, were going to just use $HOME/names.txt for you."
+                   inputPath="$PWD/names.txt"
                    ;;
 
             * ) echo "Invalid input"
