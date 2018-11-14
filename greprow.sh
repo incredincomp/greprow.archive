@@ -35,8 +35,8 @@ case $answer in
                    ;;
 
             [nN] )
-                   echo "okay, were going to just use $HOME/names.txt for you."
-                   inputPath="$PWD/names.txt"
+                   echo "okay, were going to just use $PWD/greprow/names.txt for you."
+                   inputPath="$PWD/greprow/names.txt"
                    ;;
 
             * ) echo "Invalid input"
@@ -68,7 +68,7 @@ while :
 ###a seperate file $name.txt in same directory as input file. It copys the
 ###whole matching line to new file or appends to the file that already exists. 
       if [ $? -eq 0 ] ; then
-        echo "Name found and writing to file, check current directory for $name.txt"
+        echo "Name found and writing to file, check current directory for $lookFor.txt"
 	exit
       else
         echo "Error, name not found."
