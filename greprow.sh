@@ -35,8 +35,8 @@ case $answer in
                    ;;
 
             [nN] )
-                   echo "okay, were going to just use $PWD/greprow/names.txt for you."
-                   inputPath="$PWD/names.txt"
+                   echo "okay, were going to just use $PWD/log.txt for you."
+                   inputPath="$PWD/log.txt"
                    ;;
 
             * ) echo "Invalid input"
