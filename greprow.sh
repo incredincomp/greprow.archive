@@ -23,10 +23,10 @@
 
 set -o nounset                              # Treat unset variables as an error
 
+
 echo " If you would like to define your own path, please press y. Otherwise, if you want this program to break, please press n. "
 echo -n "y or n: " 
 read answer
-#not working add if above this though maybe
 case $answer in
 
             [yY] )
@@ -43,30 +43,18 @@ case $answer in
                 ;;
 esac
 
-#if [ $answer = "y" ] ; then
-#    echo -n "Please type your full file path, starting with a backslash if req. example, /home/$USER/names.txt : "
-#    read inputPath
-
-#else 
-
-#    inputPath = $PWD
-#    echo "That's fine, this means this program is going to look in the $PWD location."
-#i dont think this is a real working path though, to be checked****#    
-#fi  
-
-
 echo -n "What lines would you like to find? "
 read lookFor
 echo "Looking for $lookFor... please wait" | echo "Search Start Time : " $(date -u)
-#I dont know why this works, how or if it even should.  This while statement shows my naivety to bash scripting though.
 
+#I dont know why this works, how or if it even should.  This while statement shows my naivety to bash scripting though.
 ###DO NOT TOUCH!!!! THIS SHOULDNT WORK, SO THEREFORE ITS PERFECTLY BROKEN AS IS!!!!###
 while : 
  do
       grep -i $lookFor $inputPath >> $lookFor.txt 
-###2.)searches in file (indicated in this script,) for $name user read variable and makes 
-###a seperate file $name.txt in same directory as input file. It copys the
-###whole matching line to new file or appends to the file that already exists. 
+###2.)searches in file (indicated in this script,) for any version of the $lookFor variable and makes 
+###a seperate file $lookFor.txt in same directory as input file. It copys the
+###whole matching line to new file or appends to the file that already exists if set up as CRON job. 
       if [ $? -eq 0 ] ; then
         echo "Name found and writing to file, check current directory for $lookFor.txt"
 	exit
