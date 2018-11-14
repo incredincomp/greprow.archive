@@ -36,7 +36,7 @@ case $answer in
 
             [nN] )
                    echo "okay, were going to just use $HOME for you."
-                   inputPath = $HOME
+                   inputPath="$HOME"
                    ;;
 
             * ) echo "Invalid input"
