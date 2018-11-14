@@ -30,7 +30,7 @@ read answer
 case $answer in
 
             [yY] )
-                   read -p "Please type your full file path, starting with a backslash if its absolute. Its more than likely equal to $PWD: " $inputPath
+                   read -p "Please type your full file path, starting with a backslash if its absolute. Its more than likely equal to $PWD: " inputPath
 #                   read inputPath
                    ;;
 
