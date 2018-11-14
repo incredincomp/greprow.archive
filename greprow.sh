@@ -55,15 +55,15 @@ esac
 #fi  
 
 
-echo -n "Who's line would you like to find? "
-read name
-echo "Looking for $name... please wait" | echo "Search Start Time : " $(date -u)
+echo -n "What lines would you like to find? "
+read lookFor
+echo "Looking for $lookFor... please wait" | echo "Search Start Time : " $(date -u)
 #I dont know why this works, how or if it even should.  This while statement shows my naivety to bash scripting though.
 
 ###DO NOT TOUCH!!!! THIS SHOULDNT WORK, SO THEREFORE ITS PERFECTLY BROKEN AS IS!!!!###
 while : 
  do
-      grep -i $name $inputPath >> $name.txt 
+      grep -i $lookFor $inputPath >> $lookFor.txt 
 ###2.)searches in file (indicated in this script,) for $name user read variable and makes 
 ###a seperate file $name.txt in same directory as input file. It copys the
 ###whole matching line to new file or appends to the file that already exists. 
