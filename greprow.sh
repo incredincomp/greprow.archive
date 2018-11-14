@@ -24,14 +24,14 @@
 set -o nounset                              # Treat unset variables as an error
 
 echo " If you would like to define your own path, please press y. Otherwise, if you want this program to break, please press n. "
-echo -n "y or n: "
-read answer
+read -p "y or n: " $answer
+#read answer
 #not working add if above this though maybe
 case $answer in
 
             [yY] )
-                   echo -n "Please type your full file path, starting with a backslash if its absolute. Its more than likely equal to $PWD: "
-                   read inputPath
+                   read -p "Please type your full file path, starting with a backslash if its absolute. Its more than likely equal to $PWD: " $inputPath
+#                   read inputPath
                    ;;
 
             [nN] )
@@ -39,7 +39,7 @@ case $answer in
                    inputPath = $HOME
                    ;;
 
-            *) echo "Invalid input"
+            * ) echo "Invalid input"
                 ;;
 esac
 
