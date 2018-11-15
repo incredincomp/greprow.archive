@@ -31,7 +31,6 @@ case $answer in
 
             [yY] )
                    read -p "Please type your full file path, starting with a backslash if its absolute. Its more than likely equal to $PWD/names.txt: " inputPath
-#                   read inputPath
                    ;;
 
             [nN] )
@@ -40,7 +39,8 @@ case $answer in
                    ;;
 
             * ) echo "Invalid input"
-                ;;
+                continue
+		;;
 esac
 
 echo -n "What lines would you like to find? "
