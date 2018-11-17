@@ -43,7 +43,7 @@ case $answer in
 		;;
 esac
 
-echo -n "What lines would you like to find? "
+echo -n "What infomation would you like to find? This can be a number pattern(192.168.2.16,) a character pattern(John,) or any other infomation. "
 read lookFor
 echo "Looking for $lookFor... please wait" | echo "Search Start Time : " $(date -u)
 
@@ -56,10 +56,10 @@ while :
 ###a seperate file $lookFor.txt in same directory as input file. It copys the
 ###whole matching line to new file or appends to the file that already exists if set up as CRON job. 
       if [ $? -eq 0 ] ; then
-        echo "Name found and writing to file, check current directory for $lookFor.txt"
+        echo "$lookFor found and writing to file, check current directory for $lookFor.txt"
 	exit
       else
-        echo "Error, name not found."
+        echo "Error, $lookFor not found."
 	exit
       fi
     done
