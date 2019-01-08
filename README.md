@@ -1,7 +1,11 @@
 ## Welcome to my bash final.
 
-The main goal of this program is to get an A in my Linux class.  Secondary objective is to make a useful program foundation
-for use in data management and research.  In its current rendition, it will just parse a text file for a keyword, constantly until the program fails to find another iteration of said keyword, also ignoring line delimiters, and will append the row contents to a new text file.  I have not tried this with a file containing multiple lines including the keyword so there is much more to be done.. this is just the base  
+The main goal of this program was to get an A in my Linux class.  Secondary objective is to make a useful program foundation
+for use in data management and research.  In its current rendition, it will parse a text file for a keyword, constantly until the program fails to find another iteration of said keyword, also ignoring line delimiters, and will append the row contents to a new text file.  I have not tried this with a file containing multiple lines including the keyword so there is much more to be done.. this is just the base  
+
+## Possible Use Cases
+•analyzing server logs for suspect ip entries
+
 
 Enter the first or full name of one of the people on your list, this will
 pull the entire line that is related to that name and print/append the data
